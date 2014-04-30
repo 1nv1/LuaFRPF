@@ -1,0 +1,8 @@
+# Example 
+trys        =  111111    # This is a numeric configuration
+pi          =  3.14 
+chain       =  "Hello world!"
+bad = Hello world!"     # This configuration is't valid. 
+bad2 = 12c              # The error is mix numbers and not valid text
+bad3 = Hello world!     # The " token is not present
+# End of example

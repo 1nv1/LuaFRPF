@@ -69,3 +69,6 @@ function Get_Config (file)
     end
     return tbl_config
 end
+
+--t = Get_Config ("test.cnf")
+--for k, v in pairs (t) do print(k, v) end
