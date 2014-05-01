@@ -28,5 +28,7 @@ pi      3.14
 chain   Hello world!
 ```
 
+License in **license.txt** file.
+
 Enjoy.
 Happy Hacking!
