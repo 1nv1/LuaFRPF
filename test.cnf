@@ -1,8 +1,21 @@
-# Example 
-trys        =  111111    # This is a numeric configuration
-pi          =  3.14 
-chain       =  "Hello world!"
-bad = Hello world!"     # This configuration is't valid. 
-bad2 = 12c              # The error is mix numbers and not valid text
-bad3 = Hello world!     # The " token is not present
-# End of example
+########################################################################
+#                             Example                                  #
+########################################################################
+
+msg = "Hello world!"	# This string is correct
+bad1 = Hello world!" 	# This string isn't between two tokens
+bad2 = Hello world!     # The " token is not present
+
+trys = 1225    			# This is a numeric configuration
+
+pi = 3.1415				# Float
+e = 2.71e-4				# Cientific notation
+bad3 = 12c              # The error is mix numbers and not valid text
+
+number = 1				# If you repeat some parameter
+number = 2				# the value that get is the last
+number = 3				# appear in the file. In this case 3.
+
+########################################################################
+#                               End                                    #
+########################################################################
