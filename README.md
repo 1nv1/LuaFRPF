@@ -85,18 +85,18 @@ The output
 ```
 Configuration default:
     number  |   0
-    msg |   Hello
+    msg     |   Hello
     trys    |   12
-    pi  |   3.14
+    pi      |   3.14
     present |   true
-    e   |   0
+    e       |   0
 Configuration from file:
     number  |   3
-    msg |   Hello world!
+    msg     |   Hello world!
     trys    |   1225
-    pi  |   3.1415
+    pi      |   3.1415
     present |   true
-    e   |   0.000271
+    e       |   0.000271
 ```
 
 License in **license.txt** file.
