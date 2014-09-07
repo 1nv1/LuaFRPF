@@ -1,12 +1,11 @@
 This script works on Lua and LuaJIT, it contains a ReadPropertyFile(file, parameters) function. 
+
 This function return a table, every index of table is a property parameter. If you run with the next test config file:
 
-
-```
 How this works? Suppose you have the next configuration file:
 
-```
 
+```
 ########################################################################
 #                             Example                                  #
 ########################################################################
@@ -30,17 +29,17 @@ number = 3              # appear in the file. In this case 3.
 ########################################################################
 
 ```
-With Get_Valid_Config() you can get the values from the configuration file if they exist in the table of configuration that you pass as parameter. Let's an example:
+
+With ReadPropertyFile(file, parameters) you can get the values from the configuration file if they exist in the table of configuration that you pass as parameter. Let's an example:
+
 
 ```
-Lua
-
 dofile("LuaFRPF.lua")
 function Print_Table (t) 
     for k, v in pairs (t) do print("\t"..tostring(k).."\t|\t"..tostring(v)) end
 end
 -- Load default value table
-config = {
+properties = {
         msg = "Hello",
         trys = 12,
         pi = 3.14,
@@ -51,13 +50,13 @@ config = {
 print("Configuration default:")
 Print_Table (config)
 -- Now load the configuration from file
-config = ReadPropertyFile ("test.cnf", config)
+properties = ReadPropertyFile ("test.cnf", properties)
 print("Configuration from file:")
 Print_Table (config)
 
 ```
 
-The output
+The output:
 
 ```
 Configuration default:
