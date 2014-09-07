@@ -1,34 +1,10 @@
-This script works on Lua and LuaJIT, it contains a Get_Config() function. The idea is get the same method of configuration like many software on Unixes with a text file.
+This script works on Lua and LuaJIT, it contains a ReadPropertyFile(file, parameters) function. The idea is get the same method of configuration like many software on Unixes with a text file.
 
  This function return a table, every index of table is the configuration parameter. If you run with the next test config file:
 
 ```
-# Example 
-trys        =  111111    # This is a numeric configuration
-pi          =  3.14 
-chain       =  "Hello world!"
-bad = Hello world!"     # This configuration is't valid. 
-bad2 = 12c              # The error is mix numbers and not valid text
-bad3 = Hello world!     # The " token is not present
-# End of example
-```
 
-With:
-
-```Lua
-t = Get_Config ("test.cnf")
-for k, v in pairs (t) do print(k, v) end
-```
-
-You get:
-
-```
-trys    111111
-pi      3.14
-chain   Hello world!
-```
-
-Also exist Get_Valid_Config function. How this works? Suppose you have the next configuration file:
+How this works? Suppose you have the next configuration file:
 
 ```
 ########################################################################
@@ -58,7 +34,7 @@ With Get_Valid_Config() you can get the values from the configuration file if th
 
 ```Lua
 
-dofile("config_reader.lua")
+dofile("LuaFRPF.lua")
 function Print_Table (t) 
     for k, v in pairs (t) do print("\t"..tostring(k).."\t|\t"..tostring(v)) end
 end
@@ -74,7 +50,7 @@ config = {
 print("Configuration default:")
 Print_Table (config)
 -- Now load the configuration from file
-config = Get_Valid_Config ("test.cnf", config)
+config = ReadPropertyFile ("test.cnf", config)
 print("Configuration from file:")
 Print_Table (config)
 
