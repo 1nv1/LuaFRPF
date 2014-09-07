@@ -1,12 +1,12 @@
-This script works on Lua and LuaJIT, it contains a ReadPropertyFile(file, parameters) function. The idea is get the same method of configuration like many software on Unixes with a text file.
+This script works on Lua and LuaJIT, it contains a ReadPropertyFile(file, parameters) function. 
+This function return a table, every index of table is a property parameter. If you run with the next test config file:
 
- This function return a table, every index of table is the configuration parameter. If you run with the next test config file:
 
 ```
-
 How this works? Suppose you have the next configuration file:
 
 ```
+
 ########################################################################
 #                             Example                                  #
 ########################################################################
@@ -28,11 +28,12 @@ number = 3              # appear in the file. In this case 3.
 ########################################################################
 #                               End                                    #
 ########################################################################
-```
 
+```
 With Get_Valid_Config() you can get the values from the configuration file if they exist in the table of configuration that you pass as parameter. Let's an example:
 
-```Lua
+```
+Lua
 
 dofile("LuaFRPF.lua")
 function Print_Table (t) 
