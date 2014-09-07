@@ -1,5 +1,5 @@
 dofile("LuaFRPF.lua")
-function Print_Table (t) 
+function PrintProperties (t) 
     for k, v in pairs (t) do print("\t"..tostring(k).."\t|\t"..tostring(v)) end
 end
 -- Load default value table
@@ -11,9 +11,9 @@ properties = {
         number = 0,
         present = true
 }
-print("Configuration default:")
-Print_Table (config)
+print("Properties default:")
+PrintProperties (properties)
 -- Now load the configuration from file
-properties = ReadPropertyFile ("test.cnf", properties)
-print("Configuration from file:")
-Print_Table (config)
+properties = ReadPropertiesFile ("test.cnf", properties)
+print("Properties from file:")
+PrintProperties (properties)

@@ -1,4 +1,4 @@
-function ReadPropertyFile (file, parameters)
+function ReadPropertiesFile (file, parameters)
     local tbl_config = {}
     local i
     local cnf = {}

@@ -1,8 +1,8 @@
-This script works on Lua and LuaJIT, it contains a ReadPropertyFile(file, parameters) function. 
+This script works on Lua and LuaJIT, it contains a ReadPropertiesFile (file, properties) function. 
 
-This function return a table, every index of table is a property parameter. If you run with the next test config file:
+This function return a table, every index of table is a property. If you run with the next test config file:
 
-How this works? Suppose you have the next configuration file:
+How this works? Suppose you have the next properties file:
 
 
 ```
@@ -27,10 +27,9 @@ number = 3              # appear in the file. In this case 3.
 ########################################################################
 #                               End                                    #
 ########################################################################
-
 ```
 
-With ReadPropertyFile(file, parameters) you can get the values from the configuration file if they exist in the table of configuration that you pass as parameter. Let's an example:
+With ReadPropertiesFile (file, properties) you can get the values from the properties file if they exist in the table of properties that you pass as property. Let's an example:
 
 
 ```
@@ -47,26 +46,26 @@ properties = {
         number = 0,
         present = true
 }
-print("Configuration default:")
-Print_Table (config)
+print("Properties default:")
+Print_Table (properties)
 -- Now load the configuration from file
 properties = ReadPropertyFile ("test.cnf", properties)
-print("Configuration from file:")
-Print_Table (config)
+print("Properties from file:")
+Print_Table (properties)
 
 ```
 
 The output:
 
 ```
-Configuration default:
+Properties default:
     number  |   0
     msg     |   Hello
     trys    |   12
     pi      |   3.14
     present |   true
     e       |   0
-Configuration from file:
+Properties from file:
     number  |   3
     msg     |   Hello world!
     trys    |   1225
