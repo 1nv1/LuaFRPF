@@ -28,7 +28,7 @@ function ReadPropertiesFile (file, parameters)
             return t
     end
     ----
-    if pf_config == nil then return nil end
+    if pf_config == nil then return parameters end -- Not file? Return the same
     -- Leo linea a línea el archivo
     for line in pf_config:lines() do
         --i = 1
