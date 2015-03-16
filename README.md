@@ -49,7 +49,7 @@ properties = {
 print("Properties default:")
 Print_Table (properties)
 -- Now load the configuration from file
-properties = ReadPropertyFile ("test.cnf", properties)
+properties = ReadPropertiesFile ("test.cnf", properties)
 print("Properties from file:")
 Print_Table (properties)
 
